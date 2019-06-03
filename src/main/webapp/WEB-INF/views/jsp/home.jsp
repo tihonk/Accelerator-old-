@@ -36,16 +36,16 @@
 <div class="jumbotron">
   <div class="container">
 	<h1>${title}</h1>
-	<p>
+	<p class="buttons">
 		<c:if test="${not empty name}">
 			Hello ${name}
 		</c:if>
  
 		<c:if test="${empty name}">
 			Log in or register to get started!
-            <p>
-                <a class="btn btn-primary btn-lg signin" href="#" role="button">Sign in</a>
-                <a class="btn btn-primary btn-lg signup" href="#" role="button">Sign up</a>
+            <p class="buttons">
+                <a class="btn btn-info btn-lg signin" href="#" role="button">Sign in</a>
+                <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
             </p>
 		</c:if>
     </p>

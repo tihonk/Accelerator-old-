@@ -1,7 +1,4 @@
-.jumbotron {
-    padding-left: 40%;
 
-}
 .navbar {
     max-height: 46px;
 }
@@ -64,4 +61,7 @@ ul.submenu > li > a:hover {
 }
 ul.menu > li:hover > ul.submenu {
     display: block;
+}
+.buttons{
+    text-align: center;
 }

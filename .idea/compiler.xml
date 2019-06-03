@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring3-mvc-maven-xml-hello-world" />
+        <module name="chemistry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring3-mvc-maven-xml-hello-world" target="1.6" />
+      <module name="chemistry" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
