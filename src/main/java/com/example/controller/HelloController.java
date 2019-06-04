@@ -5,6 +5,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -14,19 +15,15 @@ public class HelloController {
 	public String printWelcome(ModelMap model) {
 
 		model.addAttribute("message", "Spring 3 MVC Hello World");
-
 		return "home";
 
 	}
 
-	@RequestMapping(value = "/{name:.+}", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name) {
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	public String hello(ModelMap model, @RequestParam String first) {
 
-		ModelAndView model = new ModelAndView();
-		model.setViewName("home");
-		model.addObject("msg", name);
-
-		return model;
+		model.addAttribute("name", first);
+		return "home";
 
 	}
 
