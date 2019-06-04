@@ -15,7 +15,7 @@
   <div class="container">
 	<div class="navbar-header">
         <ul class="menu">
-		<a class="navbar-brand" href="">Accelerator</a>
+		<a class="navbar-brand" href="/">Accelerator</a>
           <li><a href=#>My cabinet</a>
             <ul class="submenu">
                 <li><a href=#>My account</a></li>
@@ -44,8 +44,8 @@
 		<c:if test="${empty name}">
 			Log in or register to get started!
             <p class="buttons">
-                <a class="btn btn-info btn-lg signin" href="#" role="button">Sign in</a>
-                <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
+                <a class="btn btn-success btn-lg signin" href="registration" role="button">Sign in</a>
+                <a class="btn btn-success btn-lg signup" href="registration" role="button">Sign up</a>
             </p>
 		</c:if>
     </p>
@@ -103,6 +103,6 @@
 <script src="${coreJs}"></script>
 <script src="${bootstrapJs}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
- 
+
 </body>
 </html>

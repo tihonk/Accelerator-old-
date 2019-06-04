@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: t.kasko
@@ -13,99 +14,65 @@
     <spring:url value="/resources/core/css/registration.css" var="registrationCss" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
     <link href="${registrationCss}" rel="stylesheet" />
+    <spring:url value="/resources/core/css/home.css" var="coreCss" />
+    <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
+    <link href="${bootstrapCss}" rel="stylesheet" />
+    <link href="${coreCss}" rel="stylesheet" />
 </head>
 <body>
-
-<div class="form">
-
-    <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-    </ul>
-
-    <div class="tab-content">
-        <div id="signup">
-            <h1>Sign Up for Free</h1>
-
-            <form action="/" method="post">
-
-                <div class="top-row">
-                    <div class="field-wrap">
-                        <label>
-                            First Name<span class="req">*</span>
-                        </label>
-                        <input type="text" required="" autocomplete="off">
-                    </div>
-
-                    <div class="field-wrap">
-                        <label>
-                            Last Name<span class="req">*</span>
-                        </label>
-                        <input type="text" required="" autocomplete="off">
-                    </div>
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email" required="" autocomplete="off">
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Set A Password<span class="req">*</span>
-                    </label>
-                    <input type="password" required="" autocomplete="off">
-                </div>
-
-                <button type="submit" class="button button-block">Get Started</button>
-
-            </form>
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <ul class="menu">
+                <a class="navbar-brand" href="/">Accelerator</a>
+            </ul>
         </div>
+    </div>
+</nav>
 
-        <div id="login">
-            <h1>Welcome Back!</h1>
 
-            <form action="/" method="post">
-
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email" required="" autocomplete="off">
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Password<span class="req">*</span>
-                    </label>
-                    <input type="password" required="" autocomplete="off">
-                </div>
-
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-                <button class="button button-block">Log In</button>
-
-            </form>
-
+<div class="p-x-1 p-y-3">
+    <form class="card card-block m-x-auto bg-faded form-width" method="post" action="/">
+        <legend class="m-b-1 text-xs-center">Registration</legend>
+        <div class="form-group input-group">
+ <span class="has-float-label">
+ <input class="form-control" name="first" id="first" type="text" placeholder="First Name"/>
+ <label for="first">Name</label>
+ </span>
+            <span class="has-float-label">
+ <input class="form-control" name="last" id="last" type="text" placeholder="Last Name"/>
+ <label for="last">Surname</label>
+ </span>
         </div>
-
-    </div><!-- tab-content -->
-
-</div> <!-- /form -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
-
-<script src="/resources/core/js/registration.js"></script>
-
-
-
-
-
+        <div class="form-group input-group">
+            <span class="input-group-addon">@</span>
+            <span class="has-float-label">
+ <input class="form-control" name="email" id="email" type="email" placeholder="name@example.com"/>
+ <label for="email">E-mail</label>
+ </span>
+        </div>
+        <div class="form-group has-float-label">
+            <input class="form-control" name="password-one" id="password" type="password" placeholder="******" />
+            <label for="password">Password</label>
+        </div>
+        <div class="form-group has-float-label">
+            <input class="form-control" name="password-two" id="password" type="password" placeholder="******"/>
+            <label for="password">Re-password</label>
+        </div>
+        <div class="form-group">
+            <label class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox"/>
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Remember me</span>
+            </label>
+        </div>
+        <div class="text-xs-center">
+            <button class="btn " type="submit">Sign Up</button>
+        </div>
+    </form>
+</div>
 
 
 </body>
