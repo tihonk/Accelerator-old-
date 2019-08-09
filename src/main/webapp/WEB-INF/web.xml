@@ -4,13 +4,17 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	
-	<display-name>Spring3 MVC Application</display-name>
+	<display-name>Chemistry</display-name>
+    <welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
 
-	<servlet>
+
+    <servlet>
 		<servlet-name>spring-web</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
-		<!-- 
+		<!--
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring-mvc-config.xml</param-value>
@@ -23,4 +27,23 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+    <filter>
+        <filter-name>RequestFilter</filter-name>
+        <filter-class>com.example.filters.RequestFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.example.filters.AuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>RequestFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <servlet-name>spring-web</servlet-name>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

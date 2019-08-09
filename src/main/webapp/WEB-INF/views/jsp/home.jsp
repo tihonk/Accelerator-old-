@@ -44,8 +44,8 @@
 		<c:if test="${empty name}">
 			Log in or register to get started!
             <p class="buttons">
-                <a class="btn btn-success btn-lg signin" href="registration" role="button">Sign in</a>
-                <a class="btn btn-success btn-lg signup" href="registration" role="button">Sign up</a>
+                <a class="btn btn-info btn-lg signin" href="registration" role="button">Sign in</a>
+                <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
             </p>
 		</c:if>
     </p>
@@ -93,7 +93,7 @@
  
   <hr>
   <footer>
-      <p> Product created by Kasko & Khrustalev 2019</p>
+      <p>&#9400; &#9413; Product created by @ Khrustalev & Kasko, 2019</p>
   </footer>
 </div>
  
