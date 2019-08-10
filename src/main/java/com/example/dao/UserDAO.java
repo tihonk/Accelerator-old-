@@ -15,7 +15,7 @@ public class UserDAO
    {
        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
        Session session =sessionFactory.openSession();
-       session.beginTransaction();
+       session.getTransaction().begin();
 
        try {
 

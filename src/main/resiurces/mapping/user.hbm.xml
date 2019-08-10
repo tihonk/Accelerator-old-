@@ -4,13 +4,14 @@
         "http://www.hibernate.org/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.example.dto.User" table ="user">
-        <id name="id" column="id" type="int">
+        <id name="id" column="id" type="long">
             <generator class="native"/>
         </id>
         <property name = "firstName" column="FIRSTNAME" type="string"/>
         <property name="lastName" column="LASTNAME" type="string"/>
         <property name="email" column="EMAIL" type="string"/>
         <property name="password" column="PASSWORD" type="string"/>
+        <property name="salt" column="SALT" type="string"/>
 
         <many-to-one name="role" class="com.example.dto.Role" cascade="all">
             <column name="ROLE_ID" not-null="true"/>

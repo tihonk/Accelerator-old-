@@ -40,7 +40,7 @@
         <filter-name>RequestFilter</filter-name>
         <url-pattern>/*</url-pattern>
         <servlet-name>spring-web</servlet-name>
-        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>

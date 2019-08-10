@@ -1,7 +1,6 @@
 package com.example.dto;
 
 import java.io.Serializable;
-import java.util.Set;
 
 public class User implements Serializable
 {
@@ -10,6 +9,7 @@ public class User implements Serializable
     private String lastName;
     private String email;
     private String password;
+    private String salt;
     private Role role;
 
     public User () { }
@@ -79,6 +79,16 @@ public class User implements Serializable
         this.role = role;
     }
 
+    public String getSalt()
+    {
+        return salt;
+    }
+
+    public void setSalt(String salt)
+    {
+        this.salt = salt;
+    }
+
     @Override
     public String toString()
     {
@@ -86,6 +96,7 @@ public class User implements Serializable
             ", Name='" + firstName + '\'' +
             ", Last Name=" + lastName + '\'' +
             ", Email =" + email + '\'' +
-            ", Password=" + password + '\'' + '}';
+            ", Password=" + password + '\'' +
+            ", Salt=" + salt + '\'' + '}';
     }
 }

@@ -34,18 +34,8 @@
 
 
 <div class="p-x-1 p-y-3">
-    <form class="card card-block m-x-auto bg-faded form-width" method="post" action="/registration">
-        <legend class="m-b-1 text-xs-center">Registration</legend>
-        <div class="form-group input-group">
- <span class="has-float-label">
- <input class="form-control" name="first" id="first" type="text" placeholder="First Name"/>
- <label for="first">Name</label>
- </span>
-            <span class="has-float-label">
- <input class="form-control" name="last" id="last" type="text" placeholder="Last Name"/>
- <label for="last">Surname</label>
- </span>
-        </div>
+    <form class="card card-block m-x-auto bg-faded form-width" method="post" action="/login">
+        <legend class="m-b-1 text-xs-center">Login</legend>
         <div class="form-group input-group">
             <span class="input-group-addon">@</span>
             <span class="has-float-label">
@@ -57,10 +47,6 @@
             <input class="form-control" name="password" id="password" type="password" placeholder="******" />
             <label for="password">Password</label>
         </div>
-        <div class="form-group has-float-label">
-            <input class="form-control" name="password_check" id="password" type="password" placeholder="******"/>
-            <label for="password">Re-password</label>
-        </div>
         <div class="form-group">
             <label class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox"/>
@@ -69,7 +55,7 @@
             </label>
         </div>
         <div class="text-xs-center">
-            <button class="btn " type="submit">Sign Up</button>
+            <button class="btn " type="submit">Sign In</button>
         </div>
     </form>
 </div>

@@ -44,7 +44,7 @@
 		<c:if test="${empty name}">
 			Log in or register to get started!
             <p class="buttons">
-                <a class="btn btn-info btn-lg signin" href="registration" role="button">Sign in</a>
+                <a class="btn btn-info btn-lg signin" href="login" role="button">Sign in</a>
                 <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
             </p>
 		</c:if>
