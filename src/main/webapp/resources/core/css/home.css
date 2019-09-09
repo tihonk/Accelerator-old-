@@ -23,9 +23,9 @@ ul:after {
 }
 ul.menu > li {
     float: left;
-    position: relative;
+    position: absolute;
     font-size: 18px;
-    padding-left: 850px;
+    padding-left: 80%;
 }
 ul.menu > li > a {
     display: block;

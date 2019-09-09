@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 public class PasswordService
 {
     private String generatedPassword = null;
-    String generateSecurePassword(String passwordToHash, String salt)
+    public String generateSecurePassword(String passwordToHash, String salt)
     {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");

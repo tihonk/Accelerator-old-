@@ -21,7 +21,6 @@ public class RegistrationController
     {
         UserService userService = new UserService();
         userService.saveUser(first, last, email, password, password_check);
-        User user = userService.receiveUser();
 //        model.addAttribute("name", user.getRole().getTitle());
         return "redirect:/login";
 

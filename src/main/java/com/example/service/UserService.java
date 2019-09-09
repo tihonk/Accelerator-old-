@@ -3,9 +3,7 @@ package com.example.service;
 import com.example.dao.UserDAO;
 import com.example.dto.Role;
 import com.example.dto.User;
-import sun.security.util.Password;
 
-import java.nio.charset.Charset;
 import java.util.Random;
 
 public class UserService
@@ -22,7 +20,7 @@ public class UserService
         user.setRole(role);
 
         PasswordService ps = new PasswordService();
-        String salt =  generateRandoomString();
+        String salt =  generateRandomString();
         user.setPassword(ps.generateSecurePassword(passwordOne, salt));
         user.setSalt(salt);
 
@@ -30,18 +28,26 @@ public class UserService
         userdao.save( user, role);
     }
 
-    public User
-    receiveUser()
+    public User receiveUser(long id)
     {
-        int id = 8;
         UserDAO userDAO = new UserDAO();
         return userDAO.receiveUser(id);
     }
 
-    private String generateRandoomString() {
-        byte[] array = new byte[7]; // length is bounded by 7
-        new Random().nextBytes(array);
-        String generatedString = new String(array, Charset.forName("UTF-8"));
-        return generatedString;
+    public User receiveUser(String email, String password)
+    {
+        UserDAO userDAO = new UserDAO();
+        return userDAO.receiveUser(email, password);
+    }
+
+    private String generateRandomString() {
+        char[] text = new char[16];
+        String characters ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz1234567890";
+        Random random = new Random();
+        for (int i = 0; i < 16; i++)
+        {
+            text[i] = characters.charAt(random.nextInt(characters.length()));
+        }
+        return new String(text);
     }
 }
