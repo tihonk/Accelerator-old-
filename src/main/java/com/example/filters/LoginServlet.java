@@ -1,5 +1,8 @@
 package com.example.filters;
 
+import com.example.dto.User;
+import com.example.service.AuthenticationService;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -19,31 +22,31 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
-    private final String userID = "admin";
-    private final String password = "password";
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException
     {
-
         // get request parameters for userID and password
-        String user = request.getParameter("user");
-        String pwd = request.getParameter("pwd");
+        String userID = request.getParameter("email");
+        String password = request.getParameter("password");
 
-        if (userID.equals(user) && password.equals(pwd))
+        AuthenticationService service = new AuthenticationService();
+        User user = service.chekUser(userID, password);
+
+        if (user != null)
         {
             HttpSession session = request.getSession();
-            session.setAttribute("user", "Pankaj");
+            session.setAttribute("user",  user.getFirstName() + user.getLastName());
             //setting session to expiry in 30 mins
             session.setMaxInactiveInterval(30 * 60);
-            Cookie userName = new Cookie("user", user);
+            Cookie userName = new Cookie("user", user.getFirstName());
             userName.setMaxAge(30 * 60);
             response.addCookie(userName);
-            response.sendRedirect("loginSuccess.jsp");
+            response.sendRedirect("../");
         }
         else
         {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
             PrintWriter out = response.getWriter();
             out.println("<font color=red>Either user name or password is wrong.</font>");
             rd.include(request, response);

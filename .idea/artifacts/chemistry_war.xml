@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="chemistry:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>chemistry</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="chemistry:war exploded" />
+    </root>
+  </artifact>
+</component>

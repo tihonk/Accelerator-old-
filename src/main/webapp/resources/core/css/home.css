@@ -24,8 +24,8 @@ ul:after {
 ul.menu > li {
     float: right;
     position: fixed;
+    right: 20%;
     font-size: 18px;
-    padding-left: 55%;
 }
 ul.menu > li > a {
     display: block;

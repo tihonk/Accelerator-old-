@@ -34,7 +34,7 @@
 
 
 <div class="p-x-1 p-y-3">
-    <form class="card card-block m-x-auto bg-faded form-width" method="post" action="/login">
+    <form action="LoginServlet" class="card card-block m-x-auto bg-faded form-width" method="post" action="/login">
         <legend class="m-b-1 text-xs-center">Login</legend>
         <div class="form-group input-group">
             <span class="input-group-addon">@</span>

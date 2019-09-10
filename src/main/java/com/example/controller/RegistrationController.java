@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.dto.User;
 import com.example.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

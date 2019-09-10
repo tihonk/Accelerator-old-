@@ -1,7 +1,6 @@
 package com.example.controller;
 
 import com.example.dto.User;
-import com.example.filters.AuthenticationFilter;
 import com.example.service.AuthenticationService;
 import com.example.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -21,12 +20,12 @@ public class LoginController
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String userSave(ModelMap model, @RequestParam String email, String password)
     {
-        AuthenticationService aurhService = new AuthenticationService();
-        aurhService.chekUser(email, password);
-
-        UserService userService = new UserService();
-        User user = userService.receiveUser(email, password);
-        model.addAttribute("name", user.getRole().getTitle());
-        return "redirect:/";
+//        AuthenticationService authService = new AuthenticationService();
+//        authService.chekUser(email, password);
+//
+//        UserService userService = new UserService();
+//        User user = userService.receiveUser(email, password);
+//        model.addAttribute("name", user.getRole().getTitle());
+        return "home";
     }
 }
