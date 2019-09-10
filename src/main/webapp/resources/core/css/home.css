@@ -22,10 +22,10 @@ ul:after {
     float: none;
 }
 ul.menu > li {
-    float: left;
-    position: absolute;
+    float: right;
+    position: fixed;
     font-size: 18px;
-    padding-left: 80%;
+    padding-left: 55%;
 }
 ul.menu > li > a {
     display: block;

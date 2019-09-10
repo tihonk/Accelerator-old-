@@ -38,7 +38,7 @@
         <legend class="m-b-1 text-xs-center">Registration</legend>
         <div class="form-group input-group">
             <span class="has-float-label">
-                <input class="form-control" name="first" id="first" type="text" placeholder="First Name"/>\
+                <input class="form-control" name="first" id="first" type="text" placeholder="First Name"/>
                 <label for="first">Name</label>
             </span>
             <span class="has-float-label">

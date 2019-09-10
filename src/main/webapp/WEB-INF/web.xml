@@ -44,6 +44,7 @@
     </filter-mapping>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/kkk</url-pattern>
+        <url-pattern>/kkk</url-pattern>
     </filter-mapping>
 </web-app>
