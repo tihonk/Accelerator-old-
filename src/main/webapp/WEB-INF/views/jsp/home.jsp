@@ -42,7 +42,7 @@
 		</c:if>
  
 		<c:if test="${empty name}">
-			Log in or register to get started!
+            Welcome to the chemical calculation accelerator!
             <p class="buttons">
                 <a class="btn btn-info btn-lg signin" href="login" role="button">Sign in</a>
                 <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
@@ -74,7 +74,7 @@
             The prevailing amino acid is determined.
             The result is displayed in the form of a diagram.</p>
         <p>
-            <a class="btn btn-default" href="#" role="button">Count up</a>
+            <a class="btn btn-default" href="chemistry/counter" role="button">Count up</a>
         </p>
     </div>
 	<div class="col-md-4">
@@ -104,5 +104,4 @@
 <script src="${bootstrapJs}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-</body>
 </html>
