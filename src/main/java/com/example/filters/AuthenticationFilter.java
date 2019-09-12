@@ -32,7 +32,7 @@ public class AuthenticationFilter implements Filter {
         String uri = req.getRequestURI();
         this.context.log("Requested Resource::"+uri);
 
-        HttpSession session = req.getSession(false);
+        HttpSession session = ((HttpServletRequest) request).getSession(false);
 
         if(session == null && !(uri.endsWith("login") )){
             this.context.log("Unauthorized access request");

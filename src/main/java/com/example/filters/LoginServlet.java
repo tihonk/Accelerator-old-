@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -35,14 +36,15 @@ public class LoginServlet extends HttpServlet
 
         if (user != null)
         {
-            HttpSession session = request.getSession();
-            session.setAttribute("user",  user.getFirstName() + user.getLastName());
+            HttpSession session = request.getSession(true);
+            session.setAttribute("user",  user.getPassword());
             //setting session to expiry in 30 mins
             session.setMaxInactiveInterval(30 * 60);
-            Cookie userName = new Cookie("user", user.getFirstName());
-            userName.setMaxAge(30 * 60);
-            response.addCookie(userName);
+            Cookie sessionId = new Cookie("user", user.getFirstName() );
+            sessionId.setMaxAge(30 * 60);
+            response.addCookie(sessionId);
             response.sendRedirect("../");
+
         }
         else
         {

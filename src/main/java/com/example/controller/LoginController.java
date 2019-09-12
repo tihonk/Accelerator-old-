@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.dto.User;
+import com.example.filters.TestClass;
 import com.example.service.AuthenticationService;
 import com.example.service.UserService;
 import org.springframework.stereotype.Controller;

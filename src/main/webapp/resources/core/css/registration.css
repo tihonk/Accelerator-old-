@@ -1,3 +1,7 @@
+.ref {
+    position: fixed;
+    left: 15%;
+}
 .form-width {
     max-width: 25rem;
     margin-top: 5%;
