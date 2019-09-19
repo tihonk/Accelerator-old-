@@ -1,6 +1,7 @@
 .ref {
+    float: right;
     position: fixed;
-    left: 15%;
+    right: 20%;
 }
 .form-width {
     max-width: 25rem;
