@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://vlvlnl1grfzh34vj.chr7pe7iynqr.eu-west-1.rds.amazonaws.com</property>
+        <property name="hibernate.connection.url">jdbc:mysql://vlvlnl1grfzh34vj.chr7pe7iynqr.eu-west-1.rds.amazonaws.com/ftisnxowplng64wz?sslmode=require</property>
         <property name="hibernate.connection.username">doyyiyrogec3log5</property>
         <property name="hibernate.connection.password">um2so4ffdfkaoi8q</property>
         <!--<property name="hibernate.connection.pool_size">1</property>-->
