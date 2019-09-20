@@ -32,25 +32,25 @@
 	</div>
   </div>
 </nav>
-
-<div class="jumbotron">
-  <div class="container">
-	<h1>${title}</h1>
-	<p class="buttons">
-		<c:if test="${not empty name}">
-			Hello ${name}
-		</c:if>
- 
-		<c:if test="${empty name}">
-            Welcome to the chemical calculation accelerator!
-            <p class="buttons">
-                <a class="btn btn-info btn-lg signin" href="login" role="button">Sign in</a>
-                <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>
-            </p>
-		</c:if>
-    </p>
-	</div>
-</div>
+<p><img src="../../../resources/core/pictures/planet.jpg" width="100%"  alt="planets"></p>
+<%--<div class="jumbotron">--%>
+<%--  <div class="container">--%>
+<%--	<h1>${title}</h1>--%>
+<%--	<p class="buttons">--%>
+<%--		<c:if test="${not empty name}">--%>
+<%--			Hello ${name}--%>
+<%--		</c:if>--%>
+<%-- --%>
+<%--		<c:if test="${empty name}">--%>
+<%--            Welcome to the chemical calculation accelerator!--%>
+<%--            <p class="buttons">--%>
+<%--                <a class="btn btn-info btn-lg signin" href="login" role="button">Sign in</a>--%>
+<%--                <a class="btn btn-info btn-lg signup" href="registration" role="button">Sign up</a>--%>
+<%--            </p>--%>
+<%--		</c:if>--%>
+<%--    </p>--%>
+<%--	</div>--%>
+<%--</div>--%>
  
 <div class="container">
  
