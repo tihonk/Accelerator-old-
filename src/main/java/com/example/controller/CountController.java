@@ -64,6 +64,7 @@ public class CountController
         model.put("his", his);
         model.put("pro", pro);
 
+        model.put("text", text);
 
         return "counter";
     }

@@ -12,7 +12,7 @@
 <head>
     <title>Chemistry</title>
 
-    <spring:url value="/resources/core/css/home.css" var="coreCss" />
+    <spring:url value="/resources/core/css/counter.css" var="coreCss" />
     <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
     <link href="${bootstrapCss}" rel="stylesheet" />
     <link href="${coreCss}" rel="stylesheet" />
@@ -46,7 +46,7 @@
           ['Proline',     ${pro}]
         ]);
         var options = {
-          title: 'The composition of the amino acid sequence',
+          title: 'The composition of the amino acid sequence:',
           is3D: true,
           // pieResidueSliceLabel: 'Остальное'
         };
@@ -54,6 +54,26 @@
         chart.draw(data, options);
       }
     </script>
+    <script>
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Год', '1', '2', '3'],
+          ['1860', Integer.parseInt(${gly}), Integer.parseInt(${ala}), Integer.parseInt(${val})]
+
+          // ['Percent', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+          <%--['www',     undefined${gly}, undefined${ala}, undefined${val}, undefined${leu}, ${ile} undefined${ser}, undefined${thr}, undefined${asp}, undefined${glu}, undefined${asn}, undefined${gln}, undefined${lys}, undefined${lys}, undefined${arg}, undefined${cys}, undefined${met}, undefined${phe}, undefined${tyr}, undefined${trp}, undefined${his}, ${pro}]--%>
+        ]);
+        var options = {
+          title: 'Bar graph in descending order',
+          hAxis: {title: 'Amino acid'}
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
 </head>
 <body>
 <%--<%--%>
@@ -114,14 +134,19 @@
                 <textarea name="text" cols="120" rows="12" placeholder="Enter the data"></textarea>
             </label>
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-            <p><button type="submit">Get result</button> <input type="reset" value="Clean out"></p>
+            <p><button type="submit">Get result</button> <button type="reset">Clean out</button>
         </form>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div id="air" style="width: 500px; height: 400px;"></div>
+        <div class="col-md-4">
+           <div id="air" style="width: 500px; height: 300px;"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="oil" style="width: 500px; height: 300px;"></div>
+        </div>
     </div>
 </div>
 
