@@ -142,10 +142,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-           <div id="air" style="width: 500px; height: 300px;"></div>
+<%--           <div id="air" style="width: 500px; height: 300px;"></div>--%>
         </div>
         <div class="col-md-4">
-            <div id="oil" style="width: 500px; height: 300px;"></div>
+<%--            <div id="oil" style="width: 500px; height: 300px;"></div>--%>
+    <div id="air" style="width: 500px; height: 300px;"></div>
         </div>
     </div>
 </div>
