@@ -23,16 +23,32 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Газ', 'Объём'],
-          ['Азот',     78.09],
-          ['Кислород', 20.95],
-          ['Аргон',    0.93],
-          ['Углекислый газ', 0.03]
+          ['Amino acid', 'Percent'],
+          ['Glycine',     ${gly}],
+          ['Alanine',     ${ala}],
+          ['Valine',     ${val}],
+          ['Leucine',     ${leu}],
+          ['Isoleucine',     ${ile}],
+          ['Serine',     ${ser}],
+          ['Threonine',     ${thr}],
+          ['Aspartic Acid',     ${asp}],
+          ['Glutamic Acid',     ${glu}],
+          ['Asparagine',     ${asn}],
+          ['Glutamine',     ${gln}],
+          ['Lysine',     ${lys}],
+          ['Arginine',     ${arg}],
+          ['Cysteine',     ${cys}],
+          ['Methionine',     ${met}],
+          ['Phenylalanine',     ${phe}],
+          ['Tyrosine',     ${tyr}],
+          ['Tryptophan',     ${trp}],
+          ['Histidine',     ${his}],
+          ['Proline',     ${pro}]
         ]);
         var options = {
-          title: 'Состав воздуха',
+          title: 'The composition of the amino acid sequence',
           is3D: true,
-          pieResidueSliceLabel: 'Остальное'
+          // pieResidueSliceLabel: 'Остальное'
         };
         var chart = new google.visualization.PieChart(document.getElementById('air'));
         chart.draw(data, options);
@@ -100,19 +116,14 @@
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <p><button type="submit">Get result</button> <input type="reset" value="Clean out"></p>
         </form>
-
-<%--      <p>Enter the amino acid sequence:</p>--%>
-<%--          <textarea name="text" cols="120" rows="12"></textarea>--%>
-<%--      <p><input type="submit" value="Count">--%>
-<%--          <input type="reset" value="Clean out"></p>--%>
-<%--      </form>--%>
     </div>
 </div>
-<div>
-    ${count}
-</div>
 
-<div id="air" style="width: 500px; height: 400px;"></div>
+<div class="container">
+    <div class="row">
+        <div id="air" style="width: 500px; height: 400px;"></div>
+    </div>
+</div>
 
 
 <spring:url value="/resources/core/css/hello.js" var="coreJs" />

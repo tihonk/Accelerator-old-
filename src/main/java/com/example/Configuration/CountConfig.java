@@ -49,7 +49,7 @@ public class CountConfig {
 
 
 
-    public String newConfig(String text){
+    public double[] newConfig(String text){
         char [] charArray = text.toCharArray();
         double charLength = charArray.length;
         for(char newChar : charArray){
@@ -95,28 +95,48 @@ public class CountConfig {
         he = (double)h/charLength;
         pe = (double)p/charLength;
 
-//        int[] newText =  new int[19];
+        double[] newText =  new double[20];
+        newText[0] = ge*100;
+        newText[1] = ae*100;
+        newText[2] = ve*100;
+        newText[3] = le*100;
+        newText[4] = ie*100;
+        newText[5] = se*100;
+        newText[6] = te*100;
+        newText[7] = de*100;
+        newText[8] = ee*100;
+        newText[9] = ne*100;
+        newText[10] = qe*100;
+        newText[11] = ke*100;
+        newText[12] = re*100;
+        newText[13] = ce*100;
+        newText[14] = me*100;
+        newText[15] = fe*100;
+        newText[16] = ye*100;
+        newText[17] = we*100;
+        newText[18] = he*100;
+        newText[19] = pe*100;
 
 
-        String newText = ("GLY: " + ge*100+"% "+g+" pcs.   "+
-            "ALA: " + ae*100+"% "+a+" pcs.   "+
-            "VAL: " + ve*100+"% "+s+" pcs.   "+
-            "LEU: " + le*100+"% "+l+" pcs.   "+
-            "ILE: " + ie*100+"% "+i+" pcs.   "+
-            "SER: " + se*100+"% "+s+" pcs.   "+
-            "THR: " + te*100+"% "+t+" pcs.   "+
-            "ASP: " + de*100+"% "+d+" pcs.   "+
-            "ASN: " + ne*100+"% "+n+" pcs.   "+
-            "GLN: " + qe*100+"% "+q+" pcs.   "+
-            "LYS: " + ke*100+"% "+k+" pcs.   "+
-            "ARG: " + re*100+"% "+r+" pcs.   "+
-            "CYS: " + ce*100+"% "+c+" pcs.   "+
-            "MET: " + me*100+"% "+m+" pcs.   "+
-            "PHE: " + fe*100+"% "+f+" pcs.   "+
-            "TYR: " + ye*100+"% "+y+" pcs.   "+
-            "TRP: " + we*100+"% "+w+" pcs.   "+
-            "HIS: " + he*100+"% "+h+" pcs.   "+
-            "PRO: " + pe*100+"% "+p+" pcs.   ");
+//        String newText = ("GLY: " + ge*100+"% "+g+" pcs.   "+
+//            "ALA: " + ae*100+"% "+a+" pcs.   "+
+//            "VAL: " + ve*100+"% "+s+" pcs.   "+
+//            "LEU: " + le*100+"% "+l+" pcs.   "+
+//            "ILE: " + ie*100+"% "+i+" pcs.   "+
+//            "SER: " + se*100+"% "+s+" pcs.   "+
+//            "THR: " + te*100+"% "+t+" pcs.   "+
+//            "ASP: " + de*100+"% "+d+" pcs.   "+
+//            "ASN: " + ne*100+"% "+n+" pcs.   "+
+//            "GLN: " + qe*100+"% "+q+" pcs.   "+
+//            "LYS: " + ke*100+"% "+k+" pcs.   "+
+//            "ARG: " + re*100+"% "+r+" pcs.   "+
+//            "CYS: " + ce*100+"% "+c+" pcs.   "+
+//            "MET: " + me*100+"% "+m+" pcs.   "+
+//            "PHE: " + fe*100+"% "+f+" pcs.   "+
+//            "TYR: " + ye*100+"% "+y+" pcs.   "+
+//            "TRP: " + we*100+"% "+w+" pcs.   "+
+//            "HIS: " + he*100+"% "+h+" pcs.   "+
+//            "PRO: " + pe*100+"% "+p+" pcs.   ");
         return newText;
     }
 }
