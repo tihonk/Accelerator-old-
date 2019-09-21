@@ -92,12 +92,24 @@
 
 <div class="jumbotron">
     <div class="container">
-      <p>Enter the amino acid sequence:</p>
-          <textarea name="text" cols="120" rows="12"></textarea>
-      <p><input type="submit" value="Count">
-          <input type="reset" value="Clean out"></p>
-      </form>
+        <p>Enter the amino acid sequence:</p>
+        <form method="post">
+            <label>
+                <textarea name="text" cols="120" rows="12" placeholder="Enter the data"></textarea>
+            </label>
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <p><button type="submit">Get result</button> <input type="reset" value="Clean out"></p>
+        </form>
+
+<%--      <p>Enter the amino acid sequence:</p>--%>
+<%--          <textarea name="text" cols="120" rows="12"></textarea>--%>
+<%--      <p><input type="submit" value="Count">--%>
+<%--          <input type="reset" value="Clean out"></p>--%>
+<%--      </form>--%>
     </div>
+</div>
+<div>
+    ${count}
 </div>
 
 <div id="air" style="width: 500px; height: 400px;"></div>
