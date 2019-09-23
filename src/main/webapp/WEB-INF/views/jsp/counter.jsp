@@ -68,8 +68,8 @@
             ${amino17}, ${amino18}, ${amino19}, ${amino20}]
         ]);
         var options = {
-          title: 'Bar graph in descending order'
-          // vAxis: {title: 'Percent (%)'}
+          title: 'Bar graph in descending order',
+          vAxis: {title: ' '}
         };
         var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
         chart.draw(data, options);
@@ -132,7 +132,7 @@
         <p>Enter the amino acid sequence:</p>
         <form method="post">
             <label>
-                <textarea name="text"  rows="12" placeholder="Enter the data"></textarea>
+                <textarea name="text"  rows="12" placeholder="Example: AMFCFQCQETAKNMFCFQCQETAKNTGCTVKGMCGKPEETANLQDLLIFVLRGIAI...."></textarea>
             </label>
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <p><button type="submit">Get result</button> <button type="reset">Clean out</button>
