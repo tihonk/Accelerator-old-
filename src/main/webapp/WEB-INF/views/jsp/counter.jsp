@@ -131,7 +131,7 @@
         <p>Enter the amino acid sequence:</p>
         <form method="post">
             <label>
-                <textarea name="text" cols="120" rows="12" placeholder="Enter the data"></textarea>
+                <textarea name="text"  rows="12" placeholder="Enter the data"></textarea>
             </label>
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <p><button type="submit">Get result</button> <button type="reset">Clean out</button>
