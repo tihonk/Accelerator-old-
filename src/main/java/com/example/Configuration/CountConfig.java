@@ -1,8 +1,5 @@
 package com.example.Configuration;
 
-import java.lang.reflect.Array;
-import java.util.List;
-
 public class CountConfig {
     int g;
     int a;
@@ -51,7 +48,6 @@ public class CountConfig {
 
     public double[] newConfig(String text){
         char [] charArray = text.toCharArray();
-        double charLength = charArray.length;
         for(char newChar : charArray){
             if (newChar == 'G'){ g++; }
             if (newChar == 'A'){ a++; }
@@ -74,6 +70,9 @@ public class CountConfig {
             if (newChar == 'H'){ h++; }
             if (newChar == 'P'){ p++; }
         }
+
+        double charLength = g+a+v+l+i+s+t+d+e+n+q+k+r+c+m+f+y+w+h+p;
+
         ge = (double)g/charLength;
         ae = (double)a/charLength;
         ve = (double)v/charLength;
@@ -117,26 +116,6 @@ public class CountConfig {
         newText[18] = he*100;
         newText[19] = pe*100;
 
-
-//        String newText = ("GLY: " + ge*100+"% "+g+" pcs.   "+
-//            "ALA: " + ae*100+"% "+a+" pcs.   "+
-//            "VAL: " + ve*100+"% "+s+" pcs.   "+
-//            "LEU: " + le*100+"% "+l+" pcs.   "+
-//            "ILE: " + ie*100+"% "+i+" pcs.   "+
-//            "SER: " + se*100+"% "+s+" pcs.   "+
-//            "THR: " + te*100+"% "+t+" pcs.   "+
-//            "ASP: " + de*100+"% "+d+" pcs.   "+
-//            "ASN: " + ne*100+"% "+n+" pcs.   "+
-//            "GLN: " + qe*100+"% "+q+" pcs.   "+
-//            "LYS: " + ke*100+"% "+k+" pcs.   "+
-//            "ARG: " + re*100+"% "+r+" pcs.   "+
-//            "CYS: " + ce*100+"% "+c+" pcs.   "+
-//            "MET: " + me*100+"% "+m+" pcs.   "+
-//            "PHE: " + fe*100+"% "+f+" pcs.   "+
-//            "TYR: " + ye*100+"% "+y+" pcs.   "+
-//            "TRP: " + we*100+"% "+w+" pcs.   "+
-//            "HIS: " + he*100+"% "+h+" pcs.   "+
-//            "PRO: " + pe*100+"% "+p+" pcs.   ");
         return newText;
     }
 }

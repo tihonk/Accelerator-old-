@@ -24,26 +24,26 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Amino acid', 'Percent'],
-          ['Glycine',     ${gly}],
-          ['Alanine',     ${ala}],
-          ['Valine',     ${val}],
-          ['Leucine',     ${leu}],
-          ['Isoleucine',     ${ile}],
-          ['Serine',     ${ser}],
-          ['Threonine',     ${thr}],
-          ['Aspartic Acid',     ${asp}],
-          ['Glutamic Acid',     ${glu}],
-          ['Asparagine',     ${asn}],
-          ['Glutamine',     ${gln}],
-          ['Lysine',     ${lys}],
-          ['Arginine',     ${arg}],
-          ['Cysteine',     ${cys}],
-          ['Methionine',     ${met}],
-          ['Phenylalanine',     ${phe}],
-          ['Tyrosine',     ${tyr}],
-          ['Tryptophan',     ${trp}],
-          ['Histidine',     ${his}],
-          ['Proline',     ${pro}]
+          ['${number1}',     ${amino1}],
+          ['${number2}',     ${amino2}],
+          ['${number3}',     ${amino3}],
+          ['${number4}',     ${amino4}],
+          ['${number5}',     ${amino5}],
+          ['${number6}',     ${amino6}],
+          ['${number7}',     ${amino7}],
+          ['${number8}',     ${amino8}],
+          ['${number9}',     ${amino9}],
+          ['${number10}',     ${amino10}],
+          ['${number11}',     ${amino11}],
+          ['${number12}',     ${amino12}],
+          ['${number13}',     ${amino13}],
+          ['${number14}',     ${amino14}],
+          ['${number15}',     ${amino15}],
+          ['${number16}',     ${amino16}],
+          ['${number17}',     ${amino17}],
+          ['${number18}',     ${amino18}],
+          ['${number19}',     ${amino19}],
+          ['${number20}',     ${amino20}]
         ]);
         var options = {
           title: 'The composition of the amino acid sequence:',
@@ -59,21 +59,22 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Год', '1', '2', '3'],
-          ['1860', Integer.parseInt(${gly}), Integer.parseInt(${ala}), Integer.parseInt(${val})]
+          ['Percent', '${number1}', '${number2}', '${number3}', '${number4}', '${number5}', '${number6}',
+            '${number7}', '${number8}', '${number9}', '${number10}', '${number11}', '${number12}', '${number13}',
+            '${number14}', '${number15}', '${number16}', '${number17}', '${number18}', '${number19}', '${number20}' ],
 
-          // ['Percent', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
-          <%--['www',     undefined${gly}, undefined${ala}, undefined${val}, undefined${leu}, ${ile} undefined${ser}, undefined${thr}, undefined${asp}, undefined${glu}, undefined${asn}, undefined${gln}, undefined${lys}, undefined${lys}, undefined${arg}, undefined${cys}, undefined${met}, undefined${phe}, undefined${tyr}, undefined${trp}, undefined${his}, ${pro}]--%>
+          ['Amino Acid', ${amino1}, ${amino2}, ${amino3}, ${amino4},${amino5}, ${amino6}, ${amino7},${amino8},
+            ${amino9}, ${amino10}, ${amino11}, ${amino12},${amino13}, ${amino14}, ${amino15},${amino16},
+            ${amino17}, ${amino18}, ${amino19}, ${amino20}]
         ]);
         var options = {
-          title: 'Bar graph in descending order',
-          hAxis: {title: 'Amino acid'}
+          title: 'Bar graph in descending order'
+          // vAxis: {title: 'Percent (%)'}
         };
         var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
         chart.draw(data, options);
       }
     </script>
-</head>
 </head>
 <body>
 <%--<%--%>
@@ -142,11 +143,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-<%--           <div id="air" style="width: 500px; height: 300px;"></div>--%>
+            <div id="air" style="width: 500px; height: 300px;"></div>
         </div>
         <div class="col-md-4">
-<%--            <div id="oil" style="width: 500px; height: 300px;"></div>--%>
-    <div id="air" style="width: 500px; height: 300px;"></div>
+            <div id="oil" style="width: 500px; height: 300px;"></div>
         </div>
     </div>
 </div>
