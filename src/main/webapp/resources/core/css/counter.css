@@ -104,6 +104,7 @@ button:focus:not(:active) {
 }
 
 textarea {
+    max-width: 100%;
     outline: none;
     -moz-appearance: none;
     border-radius: 6px;
