@@ -170,10 +170,10 @@
             </table>
         </div>
         <div class="col-md-4 round">
-            <div id="air" style="width: 500px; height: 380px;"></div>
+            <div id="air" style="width: 120%; height: 360px;"></div>
         </div>
         <div class="col-md-4 gistogramm">
-            <div id="oil" style="width: 500px; height: 380px;"></div>
+            <div id="oil" style="width: 500px; height: 360px;"></div>
         </div>
         </c:if>
     </div>

@@ -118,7 +118,6 @@ textarea {
 table {
     position: center;
     width: 65%; /* Ширина таблицы */
-    max-width: 160px;
     /*height: 65%;*/
     background: #222222; /* Цвет фона таблицы */
     color: white; /* Цвет текста */
@@ -191,8 +190,9 @@ td, th {
 }
 
 .round{
-    right: 12.5%;
+    right: 8.5%;
 }
 .gistogramm{
-    right: 12%;
+    right: 9%;
+    max-width: 135%;
 }
