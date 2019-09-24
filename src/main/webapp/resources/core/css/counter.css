@@ -118,6 +118,7 @@ textarea {
 table {
     position: center;
     width: 65%; /* Ширина таблицы */
+    max-width: 65%;
     /*height: 65%;*/
     background: #222222; /* Цвет фона таблицы */
     color: white; /* Цвет текста */
