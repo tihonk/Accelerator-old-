@@ -7,6 +7,7 @@
 --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,7 @@
         ]);
         var options = {
           title: 'Bar graph in descending order',
-          vAxis: {title: ' '}
+          // vAxis: {title: ' '}
         };
         var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
         chart.draw(data, options);
@@ -142,12 +143,39 @@
 
 <div class="container">
     <div class="row">
+        <c:if test="${not empty number1}">
         <div class="col-md-4">
-            <div id="air" style="width: 500px; height: 300px;"></div>
+            <table>
+                <tr><th>Amino Acid</th><th>Percent</th><th>Amount</th></tr>
+                <tr class="number1"><td>${number1}</td><td><fmt:formatNumber value="${amino1}" maxFractionDigits="4"/></td><td>${quantity1}</td></tr>
+                <tr class="number2"><td>${number2}</td><td><fmt:formatNumber value="${amino2}" maxFractionDigits="4"/></td><td>${quantity2}</td></tr>
+                <tr class="number3"><td>${number3}</td><td><fmt:formatNumber value="${amino3}" maxFractionDigits="4"/></td><td>${quantity3}</td></tr>
+                <tr class="number4"><td>${number4}</td><td><fmt:formatNumber value="${amino4}" maxFractionDigits="4"/></td><td>${quantity4}</td></tr>
+                <tr class="number5"><td>${number5}</td><td><fmt:formatNumber value="${amino5}" maxFractionDigits="4"/></td><td>${quantity5}</td></tr>
+                <tr class="number6"><td>${number6}</td><td><fmt:formatNumber value="${amino6}" maxFractionDigits="4"/></td><td>${quantity6}</td></tr>
+                <tr class="number7"><td>${number7}</td><td><fmt:formatNumber value="${amino7}" maxFractionDigits="4"/></td><td>${quantity7}</td></tr>
+                <tr class="number8"><td>${number8}</td><td><fmt:formatNumber value="${amino8}" maxFractionDigits="4"/></td><td>${quantity8}</td></tr>
+                <tr class="number9"><td>${number9}</td><td><fmt:formatNumber value="${amino9}" maxFractionDigits="4"/></td><td>${quantity9}</td></tr>
+                <tr class="number10"><td>${number10}</td><td><fmt:formatNumber value="${amino10}" maxFractionDigits="4"/></td><td>${quantity10}</td></tr>
+                <tr class="number11"><td>${number11}</td><td><fmt:formatNumber value="${amino11}" maxFractionDigits="4"/></td><td>${quantity11}</td></tr>
+                <tr class="number12"><td>${number12}</td><td><fmt:formatNumber value="${amino12}" maxFractionDigits="4"/></td><td>${quantity12}</td></tr>
+                <tr class="number13"><td>${number13}</td><td><fmt:formatNumber value="${amino13}" maxFractionDigits="4"/></td><td>${quantity13}</td></tr>
+                <tr class="number14"><td>${number14}</td><td><fmt:formatNumber value="${amino14}" maxFractionDigits="4"/></td><td>${quantity14}</td></tr>
+                <tr class="number15"><td>${number15}</td><td><fmt:formatNumber value="${amino15}" maxFractionDigits="4"/></td><td>${quantity15}</td></tr>
+                <tr class="number16"><td>${number16}</td><td><fmt:formatNumber value="${amino16}" maxFractionDigits="4"/></td><td>${quantity16}</td></tr>
+                <tr class="number17"><td>${number17}</td><td><fmt:formatNumber value="${amino17}" maxFractionDigits="4"/></td><td>${quantity17}</td></tr>
+                <tr class="number18"><td>${number18}</td><td><fmt:formatNumber value="${amino18}" maxFractionDigits="4"/></td><td>${quantity18}</td></tr>
+                <tr class="number19"><td>${number19}</td><td><fmt:formatNumber value="${amino19}" maxFractionDigits="4"/></td><td>${quantity19}</td></tr>
+                <tr class="number20"><td>${number20}</td><td><fmt:formatNumber value="${amino20}" maxFractionDigits="4"/></td><td>${quantity20}</td></tr>
+            </table>
         </div>
-        <div class="col-md-4">
-            <div id="oil" style="width: 500px; height: 300px;"></div>
+        <div class="col-md-4 round">
+            <div id="air" style="width: 500px; height: 380px;"></div>
         </div>
+        <div class="col-md-4 gistogramm">
+            <div id="oil" style="width: 500px; height: 380px;"></div>
+        </div>
+        </c:if>
     </div>
 </div>
 

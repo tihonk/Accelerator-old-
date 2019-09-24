@@ -46,7 +46,7 @@ public class CountConfig {
 
 
 
-    public double[] newConfig(String text){
+    public double[][] newConfig(String text){
         char [] charArray = text.toCharArray();
         for(char newChar : charArray){
             if (newChar == 'G'){ g++; }
@@ -94,27 +94,49 @@ public class CountConfig {
         he = (double)h/charLength;
         pe = (double)p/charLength;
 
-        double[] newText =  new double[20];
-        newText[0] = ge*100;
-        newText[1] = ae*100;
-        newText[2] = ve*100;
-        newText[3] = le*100;
-        newText[4] = ie*100;
-        newText[5] = se*100;
-        newText[6] = te*100;
-        newText[7] = de*100;
-        newText[8] = ee*100;
-        newText[9] = ne*100;
-        newText[10] = qe*100;
-        newText[11] = ke*100;
-        newText[12] = re*100;
-        newText[13] = ce*100;
-        newText[14] = me*100;
-        newText[15] = fe*100;
-        newText[16] = ye*100;
-        newText[17] = we*100;
-        newText[18] = he*100;
-        newText[19] = pe*100;
+        double[][] newText =  new double[2][20];
+        newText[0][0] = ge*100;
+        newText[0][1] = ae*100;
+        newText[0][2] = ve*100;
+        newText[0][3] = le*100;
+        newText[0][4] = ie*100;
+        newText[0][5] = se*100;
+        newText[0][6] = te*100;
+        newText[0][7] = de*100;
+        newText[0][8] = ee*100;
+        newText[0][9] = ne*100;
+        newText[0][10] = qe*100;
+        newText[0][11] = ke*100;
+        newText[0][12] = re*100;
+        newText[0][13] = ce*100;
+        newText[0][14] = me*100;
+        newText[0][15] = fe*100;
+        newText[0][16] = ye*100;
+        newText[0][17] = we*100;
+        newText[0][18] = he*100;
+        newText[0][19] = pe*100;
+
+        newText[1][0] = g;
+        newText[1][1] = a;
+        newText[1][2] = v;
+        newText[1][3] = l;
+        newText[1][4] = i;
+        newText[1][5] = s;
+        newText[1][6] = t;
+        newText[1][7] = d;
+        newText[1][8] = e;
+        newText[1][9] = n;
+        newText[1][10] = q;
+        newText[1][11] = k;
+        newText[1][12] = r;
+        newText[1][13] = c;
+        newText[1][14] = m;
+        newText[1][15] = f;
+        newText[1][16] = y;
+        newText[1][17] = w;
+        newText[1][18] = h;
+        newText[1][19] = p;
+
 
         return newText;
     }

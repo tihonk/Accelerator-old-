@@ -7,78 +7,82 @@ import java.util.Map;
 
 public class CountControllerHelper
 {
-    public Map<String, Object> getModel(Map<String, Object> model, double[] count)
+    public Map<String, Object> getModel(Map<String, Object> model, double[][] count)
     {
-//        double gly = count[0];
-//        double ala = count[1];
-//        double val = count[2];
-//        double leu = count[3];
-//        double ile = count[4];
-//        double ser = count[5];
-//        double thr = count[6];
-//        double asp = count[7];
-//        double glu = count[8];
-//        double asn = count[9];
-//        double gln = count[10];
-//        double lys = count[11];
-//        double arg = count[12];
-//        double cys = count[13];
-//        double met = count[14];
-//        double phe = count[15];
-//        double tyr = count[16];
-//        double trp = count[17];
-//        double his = count[18];
-//        double pro = count[19];
-//        model.put("gly", gly);
-//        model.put("ala", ala);
-//        model.put("val", val);
-//        model.put("leu", leu);
-//        model.put("ile", ile);
-//        model.put("ser", ser);
-//        model.put("thr", thr);
-//        model.put("asp", asp);
-//        model.put("glu", glu);
-//        model.put("asn", asn);
-//        model.put("gln", gln);
-//        model.put("lys", lys);
-//        model.put("arg", arg);
-//        model.put("cys", cys);
-//        model.put("met", met);
-//        model.put("phe", phe);
-//        model.put("tyr", tyr);
-//        model.put("trp", trp);
-//        model.put("his", his);
-//        model.put("pro", pro);
 
         HashMap<String, Double> aminoMap = new HashMap<String, Double>();
-        aminoMap.put("Glycine", count[0]);
-        aminoMap.put("Alanine", count[1]);
-        aminoMap.put("Valine", count[2]);
-        aminoMap.put("Leucine", count[3]);
-        aminoMap.put("Isoleucine", count[4]);
-        aminoMap.put("Serine", count[5]);
-        aminoMap.put("Threonine", count[6]);
-        aminoMap.put("Aspartic Acid", count[7]);
-        aminoMap.put("Glutamic Acid", count[8]);
-        aminoMap.put("Asparagine", count[9]);
-        aminoMap.put("Glutamine", count[10]);
-        aminoMap.put("Lysine", count[11]);
-        aminoMap.put("Arginine", count[12]);
-        aminoMap.put("Cysteine", count[13]);
-        aminoMap.put("Methionine", count[14]);
-        aminoMap.put("Phenylalanine", count[15]);
-        aminoMap.put("Tyrosine", count[16]);
-        aminoMap.put("Tryptophan", count[17]);
-        aminoMap.put("Histidine", count[18]);
-        aminoMap.put("Proline", count[19]);
+        aminoMap.put("Glycine", count[0][0]);
+        aminoMap.put("Alanine", count[0][1]);
+        aminoMap.put("Valine", count[0][2]);
+        aminoMap.put("Leucine", count[0][3]);
+        aminoMap.put("Isoleucine", count[0][4]);
+        aminoMap.put("Serine", count[0][5]);
+        aminoMap.put("Threonine", count[0][6]);
+        aminoMap.put("Aspartic Acid", count[0][7]);
+        aminoMap.put("Glutamic Acid", count[0][8]);
+        aminoMap.put("Asparagine", count[0][9]);
+        aminoMap.put("Glutamine", count[0][10]);
+        aminoMap.put("Lysine", count[0][11]);
+        aminoMap.put("Arginine", count[0][12]);
+        aminoMap.put("Cysteine", count[0][13]);
+        aminoMap.put("Methionine", count[0][14]);
+        aminoMap.put("Phenylalanine", count[0][15]);
+        aminoMap.put("Tyrosine", count[0][16]);
+        aminoMap.put("Tryptophan", count[0][17]);
+        aminoMap.put("Histidine", count[0][18]);
+        aminoMap.put("Proline", count[0][19]);
+
+        HashMap<String, Integer> numeroMap = new HashMap<String, Integer>();
+        numeroMap.put("Glycine", (int) count[1][0]);
+        numeroMap.put("Alanine", (int) count[1][1]);
+        numeroMap.put("Valine", (int) count[1][2]);
+        numeroMap.put("Leucine", (int) count[1][3]);
+        numeroMap.put("Isoleucine", (int) count[1][4]);
+        numeroMap.put("Serine", (int) count[1][5]);
+        numeroMap.put("Threonine", (int) count[1][6]);
+        numeroMap.put("Aspartic Acid", (int) count[1][7]);
+        numeroMap.put("Glutamic Acid", (int) count[1][8]);
+        numeroMap.put("Asparagine", (int) count[1][9]);
+        numeroMap.put("Glutamine", (int) count[1][10]);
+        numeroMap.put("Lysine", (int) count[1][11]);
+        numeroMap.put("Arginine", (int) count[1][12]);
+        numeroMap.put("Cysteine", (int) count[1][13]);
+        numeroMap.put("Methionine", (int) count[1][14]);
+        numeroMap.put("Phenylalanine", (int) count[1][15]);
+        numeroMap.put("Tyrosine", (int) count[1][16]);
+        numeroMap.put("Tryptophan", (int) count[1][17]);
+        numeroMap.put("Histidine", (int) count[1][18]);
+        numeroMap.put("Proline", (int) count[1][19]);
 
 
         List<Map.Entry<String, Double>> testEntryList = new ArrayList<>(aminoMap.entrySet());
         testEntryList.sort(Map.Entry.comparingByValue());
+
+        List<Map.Entry<String, Integer>> testEntryList2 = new ArrayList<>(numeroMap.entrySet());
+        testEntryList2.sort(Map.Entry.comparingByValue());
         int numberAminoAcids = 20;
+
+        for(Map.Entry<String, Integer> aminoAcid: testEntryList2)
+        {
+            if (numberAminoAcids >= 1)
+            {
+                if (numberAminoAcids == 1 &&  !(aminoAcid.getValue() > 0))
+                    break;
+                model.put("quantity" + numberAminoAcids, aminoAcid.getValue());
+                numberAminoAcids--;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        numberAminoAcids = 20;
         for(Map.Entry<String, Double> aminoAcid: testEntryList)
         {
             if (numberAminoAcids >=1){
+                if(numberAminoAcids == 1 && (aminoAcid.getValue().isNaN() || !(aminoAcid.getValue() > 0)))
+                    break;
                 model.put("amino"+numberAminoAcids, aminoAcid.getValue());
                 model.put("number"+numberAminoAcids, aminoAcid.getKey());
                 numberAminoAcids--;

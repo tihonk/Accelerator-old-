@@ -25,7 +25,7 @@ public class CountController
         CountConfig countconfig = new CountConfig();
         CountControllerHelper helper = new CountControllerHelper();
 
-        double[] count = countconfig.newConfig(text);
+        double[][] count = countconfig.newConfig(text);
         model = helper.getModel(model, count);
 
 
