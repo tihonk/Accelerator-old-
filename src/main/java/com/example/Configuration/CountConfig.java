@@ -49,26 +49,26 @@ public class CountConfig {
     public double[][] newConfig(String text){
         char [] charArray = text.toCharArray();
         for(char newChar : charArray){
-            if (newChar == 'G'){ g++; }
-            if (newChar == 'A'){ a++; }
-            if (newChar == 'V'){ v++; }
-            if (newChar == 'L'){ l++; }
-            if (newChar == 'I'){ i++; }
-            if (newChar == 'S'){ s++; }
-            if (newChar == 'T'){ t++; }
-            if (newChar == 'D'){ d++; }
-            if (newChar == 'E'){ e++; }
-            if (newChar == 'N'){ n++; }
-            if (newChar == 'Q'){ q++; }
-            if (newChar == 'K'){ k++; }
-            if (newChar == 'R'){ r++; }
-            if (newChar == 'C'){ c++; }
-            if (newChar == 'M'){ m++; }
-            if (newChar == 'F'){ f++; }
-            if (newChar == 'Y'){ y++; }
-            if (newChar == 'W'){ w++; }
-            if (newChar == 'H'){ h++; }
-            if (newChar == 'P'){ p++; }
+            if (newChar == 'G' || newChar == 'g'){ g++; }
+            if (newChar == 'A' || newChar == 'a'){ a++; }
+            if (newChar == 'V' || newChar == 'v'){ v++; }
+            if (newChar == 'L' || newChar == 'l'){ l++; }
+            if (newChar == 'I' || newChar == 'i'){ i++; }
+            if (newChar == 'S' || newChar == 's'){ s++; }
+            if (newChar == 'T' || newChar == 't'){ t++; }
+            if (newChar == 'D' || newChar == 'd'){ d++; }
+            if (newChar == 'E' || newChar == 'e'){ e++; }
+            if (newChar == 'N' || newChar == 'n'){ n++; }
+            if (newChar == 'Q' || newChar == 'q'){ q++; }
+            if (newChar == 'K' || newChar == 'k'){ k++; }
+            if (newChar == 'R' || newChar == 'r'){ r++; }
+            if (newChar == 'C' || newChar == 'c'){ c++; }
+            if (newChar == 'M' || newChar == 'm'){ m++; }
+            if (newChar == 'F' || newChar == 'f'){ f++; }
+            if (newChar == 'Y' || newChar == 'y'){ y++; }
+            if (newChar == 'W' || newChar == 'w'){ w++; }
+            if (newChar == 'H' || newChar == 'h'){ h++; }
+            if (newChar == 'P' || newChar == 'p'){ p++; }
         }
 
         double charLength = g+a+v+l+i+s+t+d+e+n+q+k+r+c+m+f+y+w+h+p;
