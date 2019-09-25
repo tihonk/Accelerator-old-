@@ -163,10 +163,10 @@ td, th {
     background: #8A0886;
 }
 .number12 {
-    background: #088A68;
+    background: #F2592F;
 }
 .number13 {
-    background: #86B404;
+    background: #E75228;
 }
 .number14 {
     background: #3104B4;
@@ -191,9 +191,9 @@ td, th {
 }
 
 .round{
-    right: 8.5%;
+    right: 9%;
 }
 .gistogramm{
-    right: 9%;
+    right: 11%;
     max-width: 135%;
 }

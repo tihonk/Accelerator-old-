@@ -28,9 +28,6 @@ public class CountController
         double[][] count = countconfig.newConfig(text);
         model = helper.getModel(model, count);
 
-
-        model.put("text", text);
-
         return "counter";
     }
 }
