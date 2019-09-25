@@ -63,7 +63,7 @@
            As a result, we have a list of binding sites and long links.
         </p>
 		<p>
-			<a class="btn btn-default" href="#" role="button">Accelerate up</a>
+			<a class="btn btn-default" href="chemistry/accelerator" role="button">Accelerate up</a>
 		</p>
 	</div>
     <div class="col-md-4">
