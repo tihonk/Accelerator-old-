@@ -20,12 +20,12 @@ public class LoginController
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String userSave(ModelMap model, @RequestParam String email, String password)
     {
-//        AuthenticationService authService = new AuthenticationService();
-//        authService.chekUser(email, password);
-//
-//        UserService userService = new UserService();
-//        User user = userService.receiveUser(email, password);
-//        model.addAttribute("name", user.getRole().getTitle());
+        AuthenticationService authService = new AuthenticationService();
+        authService.chekUser(email, password);
+
+        UserService userService = new UserService();
+        User user = userService.receiveUser(email, password);
+        model.addAttribute("name", user.getRole().getTitle());
         return "home";
     }
 }
