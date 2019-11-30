@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet
                           HttpServletResponse response) throws ServletException, IOException
     {
         // get request parameters for userID and password
+//        HttpSession session = request.getSession();
         String userID = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -42,12 +43,12 @@ public class LoginServlet extends HttpServlet
         if (user != null)
         {
             HttpSession session = request.getSession(true);
-            session.setAttribute("Password",  user.getPassword());
+            session.setAttribute("userId", user.getId());
             //setting session to expiry in 30 mins
             session.setMaxInactiveInterval(30 * 60);
-            Cookie sessionId = new Cookie("user", user.getFirstName() );
-            sessionId.setMaxAge(30 * 60);
-            response.addCookie(sessionId);
+            Cookie cookie = new Cookie("userId", userID);
+            cookie.setMaxAge(30 * 60);
+            response.addCookie(cookie);
             response.sendRedirect("../");
 
         }
