@@ -34,23 +34,6 @@ public class RequestFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
         Enumeration<String> params = req.getParameterNames();
 
-        HttpSession session = req.getSession(false);
-        if (session != null) {
-            // This assumes there is some javascript on the user's page to create the cookie.
-            if (session.getAttribute("user") == null) {
-                if (req.getCookies() != null) {
-                    for (Cookie cookie : req.getCookies()) {
-                        if ("user".equals(cookie.getName())) {
-                            String userName = cookie.getValue();
-                            req.getSession().setAttribute("user", userName);
-                            cookie.setMaxAge(30 * 60);
-                            res.addCookie(cookie);
-                        }
-                    }
-                }
-            }
-        }
-
         while(params.hasMoreElements()){
             String name = params.nextElement();
             String value = request.getParameter(name);

@@ -1,6 +1,7 @@
 package com.example.filters;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -34,7 +35,7 @@ public class AuthenticationFilter implements Filter {
 
         HttpSession session = ((HttpServletRequest) request).getSession(false);
 
-        if(session == null && !(uri.endsWith("login") )){
+        if((session == null && !(uri.endsWith("login"))) || Objects.requireNonNull(session).getAttribute("userId") == null){
             this.context.log("Unauthorized access request");
             res.sendRedirect("../login");
         }else{
