@@ -51,7 +51,8 @@
             <label class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox"/>
                 <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Remember me <a class="ref" href="${pageContext.request.contextPath}/registration">To register.</a></span>
+                <span class="custom-control-description">Remember me <a href="${pageContext.request.contextPath}/registration">To register.</a></span>
+
             </label>
         </div>
         <div class="text-xs-center">
