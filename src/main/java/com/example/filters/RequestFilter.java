@@ -13,6 +13,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet Filter implementation class RequestLoggingFilter
@@ -29,7 +31,26 @@ public class RequestFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
         Enumeration<String> params = req.getParameterNames();
+
+        HttpSession session = req.getSession(false);
+        if (session != null) {
+            // This assumes there is some javascript on the user's page to create the cookie.
+            if (session.getAttribute("user") == null) {
+                if (req.getCookies() != null) {
+                    for (Cookie cookie : req.getCookies()) {
+                        if ("user".equals(cookie.getName())) {
+                            String userName = cookie.getValue();
+                            req.getSession().setAttribute("user", userName);
+                            cookie.setMaxAge(30 * 60);
+                            res.addCookie(cookie);
+                        }
+                    }
+                }
+            }
+        }
+
         while(params.hasMoreElements()){
             String name = params.nextElement();
             String value = request.getParameter(name);

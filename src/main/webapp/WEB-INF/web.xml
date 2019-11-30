@@ -44,6 +44,6 @@
     </filter-mapping>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/chemistry/*</url-pattern>
     </filter-mapping>
 </web-app>
